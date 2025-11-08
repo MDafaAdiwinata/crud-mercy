@@ -1,0 +1,222 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Mobil - Admin Dashboard</title>
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <link href="../output.css" rel="stylesheet" />
+
+    <!-- Aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Website Osis SMK Bi icon -->
+    <link rel="shortcut icon" href="../../assets/img/logo-osis.png" type="image/x-icon" />
+
+    <!-- Font - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-[montserrat] bg-black">
+
+    <!-- Main Content Dashboard -->
+    <div class="px-4 md:px-4 lg:px-8 pb-20">
+        <div class="grid grid-cols-2 gap-4 mt-6 sm:mt-4">
+            <div class="flex items-center justify-start h-10 md:h-20">
+                <h1 class="text-lg md:text-2xl lg:text-2xl font-bold text-white">
+                    Kelola Mobil
+                </h1>
+            </div>
+        </div>
+
+        <hr class="w-full border border-white/20 mt-6 sm:mt-2 mb-10">
+
+        <div class="flex flex-col gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-4">
+                <a href=""
+                    class="w-fit focus:outline-none text-white bg-blue-800 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm md:text-md px-5 py-2.5 shadow-lg hover:shadow-none transition duration-300 cursor-pointer">
+                    Kembali
+                </a>
+                <h1
+                    class="text-lg lg:text-xl xl:text-2xl font-semibold text-white text-center md:text-end mt-4 lg:mt-0">
+                    Mobil - Tambah data
+                </h1>
+            </div>
+
+            <div class="flex w-full items-center justify-center mt-4">
+                <form class="space-y-4 w-full lg:w-2/3 grid grid-cols-1 lg:grid-cols-2 lg:gap-8" action="" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="flex flex-col">
+                        <!-- bebas, mw di pake atau ga -->
+                        <!-- <div class="mb-6">
+                            <label for="id_mobil" class="block mb-2 text-lg font-normal text-white">
+                                Id Mobil <span class="text-gray-300">- terisi otomatis</span>
+                            </label>
+                            <input type="number" name="id_mobil" id="id_mobil" aria-label="disabled input"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3 cursor-not-allowed"
+                                disabled />
+                        </div> -->
+                        <div class="mb-6">
+                            <label for="id_dealer" class="block mb-2 text-lg font-normal text-white">
+                                Id Dealer
+                            </label>
+                            <select id="id_dealer" name="id_dealer"
+                                class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                                required>
+                                <option value="" disabled selected>Pilih id_dealer...</option>
+                                <option value="Dealer Satu">Dealer Satu</option>
+                                <option value="Dealer Dua">Dealer Dua</option>
+                                <option value="Dan Seterusnya">Dan Seterusnya</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block mb-2 text-lg font-normal text-white" for="img_mobil">
+                                Unggah Foto Mobil (.jpg, .png, .jpeg)
+                            </label>
+                            <input
+                                class="block w-full text-md text-white border border-white/30 rounded-xl cursor-pointer bg-transparent"
+                                id="img_mobil" type="file" accept=".jpg, .png, .jpeg" name="img_mobil" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="nama_mobil" class="block mb-2 text-lg font-normal text-white">
+                                Nama Mobil
+                            </label>
+                            <input type="text" name="nama_mobil" id="nama_mobil"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="jenis_mobil" class="block mb-2 text-lg font-normal text-white">
+                                Jenis Mobil
+                            </label>
+                            <select id="jenis_mobil" name="jenis_mobil"
+                                class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                                required>
+                                <option value="" disabled selected>Pilih Jenis Mobil...</option>
+                                <option value="SUV">SUV</option>
+                                <option value="Sedan">Sedan</option>
+                                <option value="Hatchback">Hatchback</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="tipe_mobil" class="block mb-2 text-lg font-normal text-white">
+                                Tipe Mobil
+                            </label>
+                            <select id="tipe_mobil" name="tipe_mobil"
+                                class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                                required>
+                                <option value="" disabled selected>Pilih Tipe Mobil...</option>
+                                <option value="Tipe Satu">Tipe Satu</option>
+                                <option value="Tipe Dua">Tipe Dua</option>
+                                <option value="Tipe Tiga">Tipe Tiga</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="seri_mobil" class="block mb-2 text-lg font-normal text-white">
+                                Seri Mobil
+                            </label>
+                            <select id="seri_mobil" name="seri_mobil"
+                                class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                                required>
+                                <option value="" disabled selected>Pilih Seri Mobil...</option>
+                                <option value="Seri Satu">Seri Satu</option>
+                                <option value="Seri Dua">Seri Dua</option>
+                                <option value="Seri Tiga">Seri Tiga</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="tahun_rilis" class="block mb-2 text-lg font-normal text-white">
+                                Tahun Rilis
+                            </label>
+                            <input type="number" name="tahun_rilis" id="tahun_rilis"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="harga" class="block mb-2 text-lg font-normal text-white">
+                                Harga
+                            </label>
+                            <input type="number" name="harga" id="harga"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="mb-6">
+                            <label for="stok" class="block mb-2 text-lg font-normal text-white">
+                                Stok
+                            </label>
+                            <input type="number" name="stok" id="stok"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="deskripsi" class="block mb-2 text-lg font-normal text-white">
+                                Deskripsi
+                            </label>
+                            <textarea id="deskripsi" rows="3" name="deskripsi"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full p-2.5"></textarea>
+                        </div>
+                        <div class="mb-6">
+                            <label for="warna" class="block mb-2 text-lg font-normal text-white">
+                                Warna
+                            </label>
+                            <input type="text" name="warna" id="warna"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="mesin" class="block mb-2 text-lg font-normal text-white">
+                                Mesin
+                            </label>
+                            <input type="text" name="mesin" id="mesin"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="seat" class="block mb-2 text-lg font-normal text-white">
+                                Seat
+                            </label>
+                            <input type="text" name="seat" id="seat"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="drive_train" class="block mb-2 text-lg font-normal text-white">
+                                Drive Train
+                            </label>
+                            <input type="text" name="drive_train" id="drive_train"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="tenaga" class="block mb-2 text-lg font-normal text-white">
+                                Tenaga
+                            </label>
+                            <input type="text" name="tenaga" id="tenaga"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="transmisi" class="block mb-2 text-lg font-normal text-white">
+                                Transmisi
+                            </label>
+                            <input type="text" name="transmisi" id="transmisi"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        
+                        <!-- Buttom Tambah -->
+                        <button type="submit" name="tambah"
+                            class="w-fit ms-auto text-white bg-green-800 hover:bg-green-600 focus:ring-4 focus:outline-none font-bold rounded-xl text-md cursor-pointer px-5 py-2.5 text-center mt-4 transition duration-300">
+                            Tambah
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flowbite Script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>
