@@ -1,0 +1,190 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ubah Booking - Admin Dashboard</title>
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <link href="../output.css" rel="stylesheet" />
+
+    <!-- Aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Website Osis SMK Bi icon -->
+    <link rel="shortcut icon" href="../../assets/img/logo-osis.png" type="image/x-icon" />
+
+    <!-- Font - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-[montserrat] bg-black">
+
+    <!-- Main Content Dashboard -->
+    <div class="px-4 md:px-4 lg:px-8 pb-20">
+        <div class="grid grid-cols-2 gap-4 mt-6 sm:mt-4">
+            <div class="flex items-center justify-start h-10 md:h-20">
+                <h1 class="text-lg md:text-2xl lg:text-2xl font-bold text-white">
+                    Kelola Booking
+                </h1>
+            </div>
+        </div>
+
+        <hr class="w-full border border-white/20 mt-6 sm:mt-2 mb-10">
+
+        <div class="flex flex-col gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-4">
+                <a href=""
+                    class="w-fit focus:outline-none text-white bg-blue-800 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm md:text-md px-5 py-2.5 shadow-lg hover:shadow-none transition duration-300 cursor-pointer">
+                    Kembali
+                </a>
+                <h1
+                    class="text-lg lg:text-xl xl:text-2xl font-semibold text-white text-center md:text-end mt-4 lg:mt-0">
+                    Booking - Ubah data
+                </h1>
+            </div>
+
+            <div class="flex w-full items-center justify-center mt-4">
+                <form class="space-y-4 w-full lg:w-2/3 grid grid-cols-1 lg:grid-cols-2 lg:gap-8" action="" method="POST"
+                    enctype="multipart/form-data">
+                    <div class="flex flex-col">
+                        <div class="mb-6">
+                            <label for="id_user" class="block mb-2 text-lg font-normal text-white">
+                                Id User
+                            </label>
+                            <select id="id_user" name="id_user"
+                                class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                                required>
+                                <option value="" disabled selected>Pilih User...</option>
+                                <option value="User Satu">User Satu</option>
+                                <option value="User Dua">User Dua</option>
+                                <option value="Dan Seterusnya">Dan Seterusnya</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="id_mobil" class="block mb-2 text-lg font-normal text-white">
+                                Id Mobil
+                            </label>
+                            <select id="id_mobil" name="id_mobil"
+                                class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                                required>
+                                <option value="" disabled selected>Pilih Mobil...</option>
+                                <option value="User Satu">User Satu</option>
+                                <option value="User Dua">User Dua</option>
+                                <option value="Dan Seterusnya">Dan Seterusnya</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="id_dealer" class="block mb-2 text-lg font-normal text-white">
+                                Id Dealer
+                            </label>
+                            <select id="id_dealer" name="id_dealer"
+                                class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                                required>
+                                <option value="" disabled selected>Pilih Dealer...</option>
+                                <option value="User Satu">User Satu</option>
+                                <option value="User Dua">User Dua</option>
+                                <option value="Dan Seterusnya">Dan Seterusnya</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="id_admin" class="block mb-2 text-lg font-normal text-white">
+                                Id Admin
+                            </label>
+                            <select id="id_admin" name="id_admin"
+                                class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                                required>
+                                <option value="" disabled selected>Pilih Admin...</option>
+                                <option value="User Satu">User Satu</option>
+                                <option value="User Dua">User Dua</option>
+                                <option value="Dan Seterusnya">Dan Seterusnya</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="nama" class="block mb-2 text-lg font-normal text-white">
+                                Nama
+                            </label>
+                            <input type="text" name="nama" id="nama"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="gender" class="block mb-2 text-lg font-normal text-white">
+                                Gender
+                            </label>
+                            <select id="gender" name="gender"
+                                class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                                required>
+                                <option value="" disabled selected>Pilih Gender...</option>
+                                <option value="Mr">Mr</option>
+                                <option value="Mrs">Mrs</option>
+                                <option value="Dan Seterusnya">Dan Seterusnya</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 text-lg font-normal text-white">
+                                Email
+                            </label>
+                            <input type="number" name="email" id="email"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="no_telp" class="block mb-2 text-lg font-normal text-white">
+                                Nomor Telepon
+                            </label>
+                            <input type="number" name="no_telp" id="no_telp"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="tanggal_service" class="block mb-2 text-lg font-normal text-white">
+                                Tanggal Service
+                            </label>
+                            <input type="date" name="tanggal_service" id="tanggal_service"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="waktu_service" class="block mb-2 text-lg font-normal text-white">
+                                Waktu Service
+                            </label>
+                            <input type="time" name="waktu_service" id="waktu_service"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="password" class="block mb-2 text-lg font-normal text-white">
+                                Password
+                            </label>
+                            <input type="password" name="password" id="password"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                        </div>
+                        <div class="mb-6">
+                            <label for="pesan" class="block mb-2 text-lg font-normal text-white">
+                                Pesan
+                            </label>
+                            <textarea id="pesan" rows="2" name="pesan"
+                                class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full p-2.5"></textarea>
+                        </div>
+
+                        <!-- Buttom Ubah -->
+                        <button type="submit" name="ubah"
+                            class="w-fit ms-auto text-white bg-yellow-800 hover:bg-yellow-600 focus:ring-4 focus:outline-none font-bold rounded-xl text-md cursor-pointer px-5 py-2.5 text-center mt-4 transition duration-300">
+                            Ubah
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flowbite Script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>
