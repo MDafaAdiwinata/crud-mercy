@@ -1,0 +1,118 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tambah Transaksi - Admin Dashboard</title>
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <link href="../output.css" rel="stylesheet" />
+
+    <!-- Aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Website Osis SMK Bi icon -->
+    <link rel="shortcut icon" href="../../assets/img/logo-osis.png" type="image/x-icon" />
+
+    <!-- Font - Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-[montserrat] bg-black">
+
+    <!-- Main Content Dashboard -->
+    <div class="px-4 md:px-4 lg:px-8 pb-20">
+        <div class="grid grid-cols-2 gap-4 mt-6 sm:mt-4">
+            <div class="flex items-center justify-start h-10 md:h-20">
+                <h1 class="text-lg md:text-2xl lg:text-2xl font-bold text-white">
+                    Kelola Transaksi
+                </h1>
+            </div>
+        </div>
+
+        <hr class="w-full border border-white/20 mt-6 sm:mt-2 mb-10">
+
+        <div class="flex flex-col gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-4">
+                <a href=""
+                    class="w-fit focus:outline-none text-white bg-blue-800 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl text-sm md:text-md px-5 py-2.5 shadow-lg hover:shadow-none transition duration-300 cursor-pointer">
+                    Kembali
+                </a>
+                <h1
+                    class="text-lg lg:text-xl xl:text-2xl font-semibold text-white text-center md:text-end mt-4 lg:mt-0">
+                    Transaksi - Tambah data
+                </h1>
+            </div>
+
+            <div class="flex w-full items-center justify-center mt-4">
+                <form class="space-y-4 w-full lg:w-1/3" action="" method="POST" enctype="multipart/form-data">
+                    <!-- bebas, mw di pake atau ga -->
+                    <!-- <div class="mb-6">
+                        <label for="id_mobil" class="block mb-2 text-lg font-normal text-white">
+                            Id Mobil <span class="text-gray-300">- terisi otomatis</span>                                                </label>
+                        <input type="number" name="id_mobil" id="id_mobil" aria-label="disabled input"
+                            class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3 cursor-not-allowed" disabled />
+                    </div> -->
+                    <div class="mb-6">
+                        <label for="id_user" class="block mb-2 text-lg font-normal text-white">
+                            Id User
+                        </label>
+                        <select id="id_user" name="id_user"
+                            class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                            required>
+                            <option value="" disabled selected>Pilih User...</option>
+                            <option value="User Satu">User Satu</option>
+                            <option value="User Dua">User Dua</option>
+                            <option value="Dan Seterusnya">Dan Seterusnya</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label for="tanggal_transaksi" class="block mb-2 text-lg font-normal text-white">
+                            Tanggal Transaksi
+                        </label>
+                        <input type="date" name="tanggal_transaksi" id="tanggal_transaksi"
+                            class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="total_harga" class="block mb-2 text-lg font-normal text-white">
+                            Total Harga
+                        </label>
+                        <input type="number" step="0.01" name="total_harga" id="total_harga"
+                            class="bg-transparent border border-white/30 text-white text-md rounded-xl block w-full py-2.5 px-3" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="metode_pembayaran" class="block mb-2 text-lg font-normal text-white">
+                            Metode Pembayaran
+                        </label>
+                        <select id="metode_pembayaran" name="metode_pembayaran"
+                            class="bg-transparent border border-white/30 text-md md:text-lg rounded-xl focus:ring-bg-primary focus:border-bg-primary block w-full px-4 cursor-pointer hover:bg-white/10 text-white transition duration-300"
+                            required>
+                            <option value="" disabled selected>Pilih Metode Pembayaran...</option>
+                            <option value="Transfer Bank">Transfer Bank</option>
+                            <option value="Kartu Kredit">Kartu Kredit</option>
+                            <option value="E-Wallet">E-Wallet</option>
+                        </select>
+                    </div>
+
+                    <!-- Buttom Tambah -->
+                    <button type="submit" name="tambah"
+                        class="w-full text-white bg-green-800 hover:bg-green-600 focus:ring-4 focus:outline-none font-bold rounded-xl text-md cursor-pointer px-5 py-2.5 text-center mt-4 transition duration-300">
+                        Tambah
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flowbite Script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>
